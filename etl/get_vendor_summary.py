@@ -150,7 +150,7 @@ if __name__ == "__main__":
 
     logging.info("Ingesting data.....")
     ingest_db(clean_df, "vendor_sales_summary", engine)
-
+    clean_df.to_csv("vendor_sales_summary.csv", index=False)
     logging.info("Completed")
 
     conn.close()
